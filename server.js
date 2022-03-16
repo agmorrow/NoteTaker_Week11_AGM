@@ -16,10 +16,18 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
+
+const checkBodyForText = (req, res, next) => {
+  if (req.body.text.length === 0) {
+      return res.status(401).json({ error: 'You must pass text to create a note'});
+  } else {
+      next();
+  }
+};
+
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
-
 
 
 const readFromFile = util.promisify(fs.readFile);
@@ -27,7 +35,7 @@ const readFromFile = util.promisify(fs.readFile);
 
 const writeToFile = (destination, content) =>
 fs.writeFile(destination, JSON.stringify(content, null, 4), (err) => 
-err ? console.log(err) : console.log(`\nData written to ${destication}`)
+err ? console.log(err) : console.log(`\nData written to ${destination}`)
 );
 
 const readAndAppend = (content, file) => {
@@ -47,19 +55,19 @@ app.get('/api/notes', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-app.post('/api/notes', (req,res) => {
+app.post('/api/notes', checkBodyForText, (req,res) => {
   console.info(`${req.method} request received to add a note`);
 
   const { title, text} = req.body;
 
   if (req.body) {
-    const newNote = {
+    const notes = {
       title,
       text, 
       note_id: uniqid(),
     };
 
-    readAndAppend(newNote, './db/db.json');
+    readAndAppend(notes, './db/db.json');
     res.json(`Note added successfully`);
   } else {
     res.error('Error in adding note');
