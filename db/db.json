@@ -1,22 +1,22 @@
 [
     {
         "title": "Friday",
-        "text": "- homework",
-        "note_id": "6gnhx0l0wqhc4v"
+        "text": "new note",
+        "id": "6gniygl0wxwce8"
     },
     {
         "title": "Saturday",
-        "text": "class",
-        "note_id": "6gni8cl0wqhp4h"
+        "text": "NEW note",
+        "id": "6gniqol0wxwjmj"
     },
     {
         "title": "Sunday",
-        "text": "homework",
-        "note_id": "6gn2kcl0wqhv70"
+        "text": "This is a test",
+        "id": "6gnjegl0wxwqna"
     },
     {
-        "title": "Monday",
-        "text": "work",
-        "note_id": "6gndzwl0wqi12h"
+        "title": "Wednesday",
+        "text": "BAnd practice",
+        "id": "6gng4gl0wxx240"
     }
 ]

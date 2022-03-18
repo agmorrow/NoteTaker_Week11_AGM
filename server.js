@@ -67,7 +67,7 @@ app.post('/api/notes', checkBodyForText, (req, res) => {
     const notes = {
       title,
       text,
-      note_id: uniqid(),
+      id: uniqid(),
     };
 
     readAndAppend(notes, './db/db.json');
@@ -77,29 +77,6 @@ app.post('/api/notes', checkBodyForText, (req, res) => {
   }
 });
 
-app.delete("/api/notes/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", (err, data) => {
-    if (err) throw err;
-    const dbData = JSON.parse(data);
-    const newArray = [];
-
-    for (let i = 0; i < dbData.length; i++) {
-      if (i !== id) {
-        const newNotes = {
-          title: dbData[i].title,
-          text: dbData[i].text,
-          id: newArray.length
-        };
-        newArray.push(newNotes);
-      }
-    }
-    fs.writeFile(path.join(__dirname, "/db/db.json"), JSON.stringify(newArray, null, 2), (err) => {
-      if (err) throw err;
-      res.json(req.body);
-    });
-  });
-});
 
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
