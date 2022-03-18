@@ -13,38 +13,13 @@
         "note_id": "6gn8n0l0ty69bg"
     },
     {
-        "title": "Food",
-        "text": "Eat chili for lunch",
-        "note_id": "6gndv0l0tyvsdl"
+        "title": "Test Note",
+        "text": "This is a note",
+        "note_id": "6gn1dsl0vovz2u"
     },
     {
-        "title": "Drink",
-        "text": "Drink more la croix",
-        "note_id": "6gnfv4l0u1q4jb"
-    },
-    {
-        "title": "Pets",
-        "text": "Feed the cats",
-        "note_id": "6gn6u0l0u23f6u"
-    },
-    {
-        "title": "More food",
-        "text": "Cook dinner",
-        "note_id": "6gnkh4l0u538dc"
-    },
-    {
-        "title": "Bills",
-        "text": "pay phone bill",
-        "note_id": "6gnj2ol0u6bp53"
-    },
-    {
-        "title": "Bills",
-        "text": "pay phone bill",
-        "note_id": "6gn2zwl0u6lcvl"
-    },
-    {
-        "title": "Homework",
-        "text": "why wont this render?",
-        "note_id": "6gnh1ol0u7dodg"
+        "title": "test test",
+        "text": "this is a  note!",
+        "note_id": "6gna24l0vqc8ux"
     }
 ]

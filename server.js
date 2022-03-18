@@ -3,7 +3,6 @@ const express = require('express');
 const path = require("path");
 const fs = require('fs');
 const util = require('util');
-
 const uniqid = require('uniqid');
 
 const PORT = process.env.PORT || 3001;
@@ -16,17 +15,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
+ 
 
-const checkBodyForText = (req, res, next) => {
-  if (req.body.text.length === 0) {
-      return res.status(401).json({ error: 'You must pass text to create a note'});
-  } else {
-      next();
-  }
-};
-
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
+app.get('/notes', (req, res) => 
+res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 const readFromFile = util.promisify(fs.readFile);
@@ -53,6 +45,14 @@ app.get('/api/notes', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+const checkBodyForText = (req, res, next) => {
+  if (req.body.text.length === 0) {
+      return res.status(401).json({ error: 'You must pass text to create a note'});
+  } else {
+      next();
+  }
+};
+
 app.post('/api/notes', checkBodyForText, (req,res) => {
   console.info(`${req.method} request received to add a note`);
 
@@ -65,7 +65,6 @@ app.post('/api/notes', checkBodyForText, (req,res) => {
       note_id: uniqid(),
     };
     
-
     readAndAppend(notes, './db/db.json');
     res.json(`Note added successfully`);
   } else {
