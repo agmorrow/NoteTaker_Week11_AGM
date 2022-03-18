@@ -1,22 +1,22 @@
 [
     {
+        "title": "Hello World!",
+        "text": "This is my note taker application",
+        "id": "6gngcgl0wyz5ib"
+    },
+    {
+        "title": "SONGS 4 U",
+        "text": "Movements - Colorblind\nBeing As An Ocean - Nothing, Save the Power They're Given\nLittle Image - Cardboard Box Spaceship\nAll Get Out - Value",
+        "id": "6gn6ccl0wz2gzf"
+    },
+    {
         "title": "Friday",
-        "text": "new note",
-        "id": "6gniygl0wxwce8"
+        "text": "Finish homework\nPush to heroku",
+        "id": "6gn3k0l0wz3d7f"
     },
     {
-        "title": "Saturday",
-        "text": "NEW note",
-        "id": "6gniqol0wxwjmj"
-    },
-    {
-        "title": "Sunday",
-        "text": "This is a test",
-        "id": "6gnjegl0wxwqna"
-    },
-    {
-        "title": "Wednesday",
-        "text": "BAnd practice",
-        "id": "6gng4gl0wxx240"
+        "title": "Todo",
+        "text": "1) Finish homework\n2) Review class material\n3) Do great things",
+        "id": "6gnzsl0wz4u1e"
     }
 ]
