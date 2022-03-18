@@ -45,8 +45,8 @@ https://notetaker-11-agm.herokuapp.com/
 
 ### Screenshots
 
-
-
+<img width="952" alt="Home" src="https://user-images.githubusercontent.com/82473623/159092158-6f645e91-8db0-45da-8bfb-10c6ac6d2953.png">
+<img width="946" alt="notes" src="https://user-images.githubusercontent.com/82473623/159092164-75f61f45-ed15-4c9b-86d0-4e184f8bedc4.png">
 
 ## Credits
 DU Bootcamp Lectures - Week 11
