@@ -39,7 +39,7 @@ const readAndAppend = (content, file) => {
     }
   });
 };
-
+// GET Route for retrieving all the notes
 app.get('/api/notes', (req, res) => {
   console.info(`${req.method} request received for notes`);
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
@@ -54,7 +54,7 @@ const checkBodyForText = (req, res, next) => {
     next();
   }
 };
-
+// POST Route for submitting notes
 app.post('/api/notes', checkBodyForText, (req, res) => {
   console.info(`${req.method} request received to add a note`);
 
