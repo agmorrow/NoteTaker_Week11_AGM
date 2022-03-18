@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "title": "Friday",
+        "text": "- homework",
+        "note_id": "6gnhx0l0wqhc4v"
+    },
+    {
+        "title": "Saturday",
+        "text": "class",
+        "note_id": "6gni8cl0wqhp4h"
+    },
+    {
+        "title": "Sunday",
+        "text": "homework",
+        "note_id": "6gn2kcl0wqhv70"
+    },
+    {
+        "title": "Monday",
+        "text": "work",
+        "note_id": "6gndzwl0wqi12h"
+    }
+]
